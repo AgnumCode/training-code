@@ -36,7 +36,7 @@ namespace FizzBuzz
                 }
                 else if ((number % 3) == 0) //Condition for numbers divisible with 3. 
                 {
-                    Console.WriteLine(" Fizz " + number); //Identifier and the divisible number 
+                    Console.WriteLine(" Fizz " + number); //Identifier and the divisible number.  
                     FizzCounter++; //Counter for Fizz
                 }
                 else if ((number % 5) == 0) //Condition for numbers divisible with 5.
