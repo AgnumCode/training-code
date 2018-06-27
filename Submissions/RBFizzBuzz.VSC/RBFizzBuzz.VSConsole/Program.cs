@@ -61,7 +61,7 @@ namespace RBFizzBuzz.VSConsole
             Console.WriteLine($"The total number of Fizz: {fizz}");
             Console.WriteLine($"The total number of Buzz: {buzz}");
             Console.WriteLine($"The total number of FizzBuzz: {fb}");
-            Console.WriteLine($"The total number of no match: {num}");
+            Console.WriteLine($"The total number of none matching: {num}");
             Console.ReadLine();
         }
 
