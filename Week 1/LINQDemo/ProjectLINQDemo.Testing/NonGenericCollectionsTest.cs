@@ -18,7 +18,7 @@ namespace ProjectLINQDemo.Testing
             col.Add("test string");
 
             // assert
-            // if we reach her, the test is successful
+            // if we reach here, the test is successful
 
         }
 
