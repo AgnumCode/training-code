@@ -16,29 +16,39 @@ namespace LINQDemo.Library
 
         public void AddMany(IEnumerable<string> strings)
         {
-           
-                list.AddRange(strings);
-            
+            list.AddRange(strings);
+        }   
+        
+        public string Longest()
+        {
+            // var example = new { s = "abc", l = "abc".Length };
+            //method syntax
+            List<int> listOfLengths = list.Select(s => s.Length).ToList();
+            // method syntax
+            var listWithAwfulSyntax = (from item in list
+                                      where item.Length > 2
+                                      select item.Length).ToList();
+            var length = LongestLength();
+            return list.First(s => s.Length == length);
         }
 
         public string DumbLongest()
         {
             int longestLength = 0;
-            string longest = null; 
+            string longest = null;
 
             foreach (var item in list)
             {
-                if (item.Length < longestLength)
+                if (item.Length > longestLength)
                 {
                     longestLength = item.Length;
                     longest = item;
-
                 }
             }
 
             return longest;
         }
-
+        
         public int LongestLength()
         {
             return list.Max(x => x.Length);
@@ -57,6 +67,24 @@ namespace LINQDemo.Library
                     "aeiouAEIOU".Contains(c)
                 )
             );
+        }
+
+        public string ThirdAlphabetical()
+        {
+            //linq deferred execution
+            var query = list.OrderBy(x => x).Skip(2);       // orders and drops first 2 from list
+            return query.First();                           // returns first element of list 
+        }
+
+        public bool Contains(string item)
+        {
+            // null check code
+            if (item == null)
+            {
+                throw new ArgumentNullException(nameof(item));
+            }
+
+            return list.Contains(item);
         }
 
     }

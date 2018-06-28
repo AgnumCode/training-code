@@ -17,6 +17,7 @@ namespace MovieTheater.Library.Models
 
         public string Movie => throw new NotImplementedException();
 
+        // test git change
         public VHSMovie(string title, DateTime date)
         {
             Title = title;
