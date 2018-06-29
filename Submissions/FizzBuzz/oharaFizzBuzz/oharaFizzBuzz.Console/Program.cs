@@ -15,7 +15,7 @@ namespace oharaFizzBuzz
             {
                 if (i % 15 == 0)
                 {
-                    System.Console.WriteLine("fizzbuzz");
+                    System.Console.WriteLine("Fizzbuzz");
                     fizzbuzzes++;
                 }
                 else if (i % 3 == 0)
