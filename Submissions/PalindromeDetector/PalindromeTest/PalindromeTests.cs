@@ -10,14 +10,17 @@ namespace PalindromeTest
         [TestMethod]
         public void TestCorrectPalindromeDetection()
         {
+            // Arrange
             string value = "racecar";
-            bool expected = true;
-            bool actual;
+            object expected = true;
+            object actual;
 
+            // Act
             PalindromeDetector detector = new PalindromeDetector();
             actual = detector.IsPalindrome(value);
 
-
+            // Assert
+            Assert.AreEqual(expected, actual, "Palindrome Detector returned false result");
 
         }
     }
