@@ -32,7 +32,7 @@ namespace FizzBuzz
                 if ((number % 3) == 0 && (number % 5) == 0) //Condition for numbers divisible between 3 and 5
                 {
                     Console.WriteLine(" FizzBuzz " + number);  //Identifier and the divisible number 
-                    FizzBuzzCounter++; //Counter for FizzBuzz
+                    FizzBuzzCounter++;  //Counter for FizzBuzz
                 }
                 else if ((number % 3) == 0) //Condition for numbers divisible with 3. 
                 {
@@ -48,6 +48,7 @@ namespace FizzBuzz
                 {
                     Console.WriteLine("Numbers not divisible: " + number);
                     NumberCounter++; //Counter for numbers 
+
                 }
 
             }
