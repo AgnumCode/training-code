@@ -6,7 +6,7 @@ namespace Animals.Library
 {
     public class Dog : IAnimal
     {
-
+        //field with getter and setter
 
         //private string name;
 
@@ -20,13 +20,16 @@ namespace Animals.Library
         //    name = newName; 
         //}
 
-        public string Name { get; set; }
+        public  string Name { get; set; }
 
-        private string ownerName;
+        private string ownerName; // bscking field
 
         public string OwnerName
         {
-            get { return ownerName; }
+            get
+            {
+                return "Nick";
+            }
             set 
             {
                 if (value != null)
@@ -47,5 +50,7 @@ namespace Animals.Library
             //Console.WriteLine("walk to " + location);
             Console.WriteLine($"Walk to {location.ToUpper()}");
         }
+
+        public  string GoAction { get; set; } = "Walking";
     }
 }

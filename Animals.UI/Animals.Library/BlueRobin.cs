@@ -6,7 +6,7 @@ namespace Animals.Library
 {
     public class BlueRobin : Bird
     {
-        public BlueRobin() : base(4)
+        public BlueRobin() : base(wingSpan: 3)
         {
 
         }
