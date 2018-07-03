@@ -7,22 +7,16 @@ namespace Palindrome.UI
     {
         static void Main(string[] args)
         {
+            
             //Palindrome word = new Palindrome(); 
             Console.WriteLine("Enter a string: ");
             string input = Console.ReadLine();
 
 
-            Console.ReadLine(); 
+            Console.ReadLine();
         }
 
-       
+
     }
 
-    class Palindrome
-    {
-        public static void PalindromeTester()
-        {
-            //string data = Regex.Replace
-        }
-    }
 }

@@ -7,28 +7,28 @@ namespace Palindromes.Library
 
     public class Palindrome
     {
-        public Palindrome(){}
+        public static bool IsPalindrome(string str)
+        { 
+                string rev = "";
+                //string [] words
 
-        public static bool IsPalindrome(string word)
-        {
-            int min = 0;
-            int max = word.Length - 1;
-            while (true)
-            {
-                if (min > max)
+                for (int i = input1.Length - 1; i >= 0; i--)
+                {
+                    rev += input1[i];
+                }
+
+                if (str.ToLower() == rev.ToLower())
                 {
                     return true;
+
                 }
-                char a = word[min];
-                char b = word[max];
-                if (char.ToLower(a) != char.ToLower(b))
+                else
                 {
                     return false;
                 }
-
-                min++;
-                max--;
             }
+
         }
-    } 
+        
+    }
 }
