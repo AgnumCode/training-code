@@ -1,6 +1,9 @@
 ﻿using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
+using System.IO;
+
+
 
 namespace EntityFrameworkFirstDemo.Data
 {
@@ -19,12 +22,25 @@ namespace EntityFrameworkFirstDemo.Data
         public virtual DbSet<Movie> Movie { get; set; }
         public virtual DbSet<MoviesGenre> MoviesGenre { get; set; }
 
+        public string getJSONConnectionString()
+        {
+            using (StreamReader s = new StreamReader("C:\\Revature\\training-code\\Week 2\\SQL\\EntityFrameworkFirstDemo\\EntityFrameworkFirstDemo.ConsoleApp\\connectionString.txt"))
+            {
+                string connectionString = s.ReadToEnd();
+                return connectionString;
+            }
+            
+        }
+        
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             if (!optionsBuilder.IsConfigured)
             {
-#warning To protect potentially sensitive information in your connection string, you should move it out of source code. See http://go.microsoft.com/fwlink/?LinkId=723263 for guidance on storing connection strings.
-                optionsBuilder.UseSqlServer("Server=tcp:ohara-1806.database.windows.net,1433;Initial Catalog=MoviesDB;Persist Security Info=False;User ID=kohara2794;Password=Eddioman122!;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;");
+                string connectionString = getJSONConnectionString();
+                Console.WriteLine(connectionString);
+
+                // Protecting connectionString Information
+                optionsBuilder.UseSqlServer(connectionString);
             }
         }
 

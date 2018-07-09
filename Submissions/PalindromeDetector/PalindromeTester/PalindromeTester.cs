@@ -1,8 +1,10 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using PalindromeDetector.Library;
+using PalindromeDetector;
 
 namespace PalindromeTester
 {
+    
+
     [TestClass]
     public class PalindromeTester
     {
@@ -13,12 +15,12 @@ namespace PalindromeTester
             string value = "racecar";
             object expected = true;
             object actual = false;
+            Palindrome detector = new PalindromeDetector.Palindrome(value);
 
             // Act
-            PalindromeTester detector = new PalindromeDetector.Library.Palindrome();
-            
+            actual = detector.IsPalindrome(value);
+
             // Assert
-            detector.isPalindrome(value);
             Assert.AreEqual(expected, actual, "Palindrome Detector worked incorrectly");
         }
     }

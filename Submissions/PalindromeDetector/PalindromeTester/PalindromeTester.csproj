@@ -13,7 +13,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\PalindromeDetector.Library\PalindromeDetector.Library.csproj" />
+    <ProjectReference Include="..\PalindromeDetector.Library\PalindromeDetector.csproj" />
   </ItemGroup>
 
 </Project>

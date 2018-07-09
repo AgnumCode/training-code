@@ -2,18 +2,19 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace PalindromeDetector.Library
+namespace PalindromeDetector
 {
-    class Palindrome
+
+    public class Palindrome
     {
+        private readonly string strValue;
 
-
-            public Palindrome()
-            {
-
-            }
+        public Palindrome(string value)
+        {
+            strValue = value;
+        }
         
-            public static bool IsPalindrome(string value)
+            public bool IsPalindrome(string value)
             {
                 int min = 0;
                 int max = value.Length - 1;
@@ -35,6 +36,13 @@ namespace PalindromeDetector.Library
             }
 
 
+        static void Main(String[] args)
+        {
+            string str = "racecar";
+            Palindrome detector = new Palindrome(str);
+            bool palindromeResult = detector.IsPalindrome(str);
+            Console.WriteLine("Is the string a Palindrome?" + palindromeResult);
+        }
         
     }
 }
