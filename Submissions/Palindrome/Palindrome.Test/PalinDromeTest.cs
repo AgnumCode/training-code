@@ -12,7 +12,11 @@ namespace Palindrome.Test
 
             // arrange 
             string str = "";
+<<<<<<< HEAD
             
+=======
+            Palindrome palin = new Palindrome;
+>>>>>>> master
             // act
 
             // assert 
@@ -23,7 +27,11 @@ namespace Palindrome.Test
         public void PalindromeWithTruePalindrome()
         {
             // arrange
+<<<<<<< HEAD
             string str = "nurses run";
+=======
+            string str = "nurses run"
+>>>>>>> master
 
             // act
 
@@ -35,7 +43,11 @@ namespace Palindrome.Test
         pubilc void PalindromeWithFalsePalindrome()
         {
             // arrange
+<<<<<<< HEAD
             string str = "one two one";
+=======
+            "one two one";
+>>>>>>> master
 
             // act 
 

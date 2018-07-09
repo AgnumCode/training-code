@@ -17,6 +17,7 @@ namespace LINQDemo.Library
         public void AddMany(IEnumerable<string> strings)
         {
             list.AddRange(strings);
+<<<<<<< HEAD
         }   
         
         public string Longest()
@@ -28,6 +29,20 @@ namespace LINQDemo.Library
             var listWithAwfulSyntax = (from item in list
                                       where item.Length > 2
                                       select item.Length).ToList();
+=======
+        }
+
+        public string Longest()
+        {
+            //var example = new { s = "abc", l = "abc".Length };
+            // method syntax
+            List<int> listOfLengths = list.Select(s => s.Length).ToList();
+            // query syntax
+            List<int> listWithAwfulSyntax = (from item in list
+                                             where item.Length > 2
+                                             select item.Length).ToList();
+
+>>>>>>> master
             var length = LongestLength();
             return list.First(s => s.Length == length);
         }
@@ -48,7 +63,11 @@ namespace LINQDemo.Library
 
             return longest;
         }
+<<<<<<< HEAD
         
+=======
+
+>>>>>>> master
         public int LongestLength()
         {
             return list.Max(x => x.Length);
@@ -61,7 +80,10 @@ namespace LINQDemo.Library
 
         public int TotalVowelCount()
         {
+<<<<<<< HEAD
             
+=======
+>>>>>>> master
             return list.Sum(s =>
                 s.Count(c =>
                     "aeiouAEIOU".Contains(c)
@@ -71,9 +93,15 @@ namespace LINQDemo.Library
 
         public string ThirdAlphabetical()
         {
+<<<<<<< HEAD
             //linq deferred execution
             var query = list.OrderBy(x => x).Skip(2);       // orders and drops first 2 from list
             return query.First();                           // returns first element of list 
+=======
+            // linq deferred execution
+            IEnumerable<string> query = list.OrderBy(x => x).Skip(2);
+            return query.First();
+>>>>>>> master
         }
 
         public bool Contains(string item)
@@ -83,9 +111,14 @@ namespace LINQDemo.Library
             {
                 throw new ArgumentNullException(nameof(item));
             }
+<<<<<<< HEAD
 
             return list.Contains(item);
         }
 
+=======
+            return list.Contains(item);
+        }
+>>>>>>> master
     }
 }

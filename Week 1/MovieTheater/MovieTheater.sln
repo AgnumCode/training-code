@@ -3,9 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27703.2035
 MinimumVisualStudioVersion = 10.0.40219.1
+<<<<<<< HEAD
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MovieTheater.UI", "MovieTheater.UI\MovieTheater.UI.csproj", "{14DE7CFB-F9C6-4908-9E37-3BEAA4058381}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MovieTheater.Library", "ConsoleApp1\MovieTheater.Library.csproj", "{8B033069-0615-42AE-97CF-92B892C7C22D}"
+=======
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MovieTheater.UI", "MovieTheater.UI\MovieTheater.UI.csproj", "{315C9AE3-7A08-48A3-BEBD-6B7AE4D92EE7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MovieTheater.Library", "MovieTheater.Library\MovieTheater.Library.csproj", "{37429337-D645-4AD8-94F3-06A0DBC83A9C}"
+>>>>>>> master
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,6 +19,7 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+<<<<<<< HEAD
 		{14DE7CFB-F9C6-4908-9E37-3BEAA4058381}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{14DE7CFB-F9C6-4908-9E37-3BEAA4058381}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{14DE7CFB-F9C6-4908-9E37-3BEAA4058381}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -21,11 +28,25 @@ Global
 		{8B033069-0615-42AE-97CF-92B892C7C22D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8B033069-0615-42AE-97CF-92B892C7C22D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8B033069-0615-42AE-97CF-92B892C7C22D}.Release|Any CPU.Build.0 = Release|Any CPU
+=======
+		{315C9AE3-7A08-48A3-BEBD-6B7AE4D92EE7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{315C9AE3-7A08-48A3-BEBD-6B7AE4D92EE7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{315C9AE3-7A08-48A3-BEBD-6B7AE4D92EE7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{315C9AE3-7A08-48A3-BEBD-6B7AE4D92EE7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{37429337-D645-4AD8-94F3-06A0DBC83A9C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{37429337-D645-4AD8-94F3-06A0DBC83A9C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{37429337-D645-4AD8-94F3-06A0DBC83A9C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{37429337-D645-4AD8-94F3-06A0DBC83A9C}.Release|Any CPU.Build.0 = Release|Any CPU
+>>>>>>> master
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
+<<<<<<< HEAD
 		SolutionGuid = {D9CCC7A6-ABBC-49B6-9FE5-B13831FE6D29}
+=======
+		SolutionGuid = {16EE08E4-AFD5-4F77-BF0E-EEC16A4AB5FF}
+>>>>>>> master
 	EndGlobalSection
 EndGlobal

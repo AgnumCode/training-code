@@ -1,7 +1,11 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
+<<<<<<< HEAD
     <TargetFramework>netcoreapp2.0</TargetFramework>
+=======
+    <TargetFramework>netstandard2.0</TargetFramework>
+>>>>>>> master
   </PropertyGroup>
 
 </Project>

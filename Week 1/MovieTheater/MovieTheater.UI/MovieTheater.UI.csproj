@@ -6,7 +6,11 @@
   </PropertyGroup>
 
   <ItemGroup>
+<<<<<<< HEAD
     <ProjectReference Include="..\ConsoleApp1\MovieTheater.Library.csproj" />
+=======
+    <ProjectReference Include="..\MovieTheater.Library\MovieTheater.Library.csproj" />
+>>>>>>> master
   </ItemGroup>
 
 </Project>

@@ -1,5 +1,9 @@
 ﻿using MovieTheater.Library.Models;
 using System;
+<<<<<<< HEAD
+=======
+using System.Collections.Generic;
+>>>>>>> master
 
 namespace MovieTheater.UI
 {
@@ -12,28 +16,49 @@ namespace MovieTheater.UI
 
         static void Main(string[] args)
         {
+<<<<<<< HEAD
             DVDMovie lostArk = new DVDMovie()
             {
             Title = "Raiders of the Lost Ark",
             Genre = "Action/Adventure",
             ReleaseDate = new DateTime (1980, 1, 1)
             
+=======
+            DVDMovie lostArk = new DVDMovie
+            {
+                Title = "Raiders of the Lost Ark",
+                Genre = "Action/Adventure",
+                ReleaseDate = new DateTime(1980, 1, 1)
+>>>>>>> master
             };
 
             var player = new MoviePlayer();
 
             MoviePlayer.ShowHandler handler = PrintMessage;
 
+<<<<<<< HEAD
             // subscribe to an event
             player.Show += handler;
 
             // unsubscribe from an event
             //player.Show -= handler;
+=======
+            // subscribe to an event.
+            player.Show += handler;
+
+            // unsubscribe from an event.
+            //player.Show -= handler;
+            // now NO delegate is subscribed to the event!
+>>>>>>> master
 
             //player.Show += handler;
 
             MoviePlayer.ShowHandler handler2 = (string s) => Console.WriteLine(s);
+<<<<<<< HEAD
             // void handler2(string s) => Console.WriteLine(s);
+=======
+            //void handler2(string s) => Console.WriteLine(s);
+>>>>>>> master
 
             handler2("Running handler2");
 
@@ -50,9 +75,15 @@ namespace MovieTheater.UI
                     Console.WriteLine("long title");
                 }
             };
+<<<<<<< HEAD
             player.Play(lostArk);
         }
 
        
+=======
+
+            player.Play(lostArk);
+        }
+>>>>>>> master
     }
 }

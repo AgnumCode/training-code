@@ -8,7 +8,11 @@ namespace LINQDemo.Library
     {
         public static bool IsEmpty(this NonGenericCollection col)
         {
+<<<<<<< HEAD
             return col.DumbLongest() == null; 
+=======
+            return col.DumbLongest() == null;
+>>>>>>> master
         }
     }
 }
