@@ -27,6 +27,7 @@ CREATE TABLE EmpDetails
     Country NVARCHAR(50)
 )
 
+-- Insert Marketing and 3 others to make at least 3
 INSERT INTO Department
 VALUES ('4', 'Marketing', 'New York'),
  ('1', 'Sales', 'New York'),
@@ -34,6 +35,7 @@ VALUES ('4', 'Marketing', 'New York'),
 ('3', 'Finacial', 'New York'),
 ('4', 'Marketing', 'New York');
 
+-- Insert Tina Smith along with others to make at least 3
 INSERT INTO Employee
 VALUES ('5', 'Tina', 'Smith', '555776789', '4'),
 ('4', 'Tina', 'Smith', '555776789', '1'),
@@ -41,19 +43,24 @@ VALUES ('5', 'Tina', 'Smith', '555776789', '4'),
 ('2', 'Ludwig', 'Wittgenstein', '923456789', '1'),
 ('3', 'Martin', 'Heidegger', '555456789', '2');
 
-
+-- Insert details for Tina Smith and the other Employees
 INSERT INTO EmpDetails
-VALUES ('4', '4', '1800000.00', '123 37th St', 'Apt 37C', 'New York', 'NY', 'USA'),
+VALUES ('5', '5', '90000.00', '123 5th Avet', 'Apt 37B', 'New York', 'NY', 'USA'),
+('4', '4', '1800000.00', '123 37th St', 'Apt 37C', 'New York', 'NY', 'USA'),
 ('1', '1', '90000.00', '123 Fake Street', 'Apt 3', 'New York', 'NY', 'USA'),
 ('2', '2', '1300000.00', '129 Fake Street', 'Apt 9', 'New York', 'NY', 'USA'),
 ('3', '3', '800000.00', '123 Bleeker Street', 'Apt 37B', 'New York', 'NY', 'USA');
 
+-- All employees in Marketing
 SELECT * FROM Employee
 WHERE DeptID IN (SELECT ID FROM Department WHERE Name = 'Marketing');
 
+
+-- Total salary of Marketing
 SELECT SUM(Salary) FROM EmpDetails
-WHERE DeptID IN (SELECT ID FROM Department WHERE Name = 'Marketing');
+WHERE EmployeeID IN (SELECT ID FROM Department WHERE Name = 'Marketing');
 
 
-SELECT COUNT(Employee.DeptID) FROM Employee
-WHERE DeptID IN (SELECT ID FROM Department WHERE Name = 'Marketing');
+SELECT COUNT(Employee.DeptID) AS NumberOfMarketingEmployees FROM Employee
+WHERE DeptID IN (SELECT ID FROM Department WHERE Name = 'Marketing')
+GROUP BY Employee.DeptID;
