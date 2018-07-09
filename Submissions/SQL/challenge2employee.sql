@@ -64,3 +64,9 @@ WHERE EmployeeID IN (SELECT ID FROM Department WHERE Name = 'Marketing');
 SELECT COUNT(Employee.DeptID) AS NumberOfMarketingEmployees FROM Employee
 WHERE DeptID IN (SELECT ID FROM Department WHERE Name = 'Marketing')
 GROUP BY Employee.DeptID;
+
+-- Update Tina's Salary to 90,000
+--  DIDNT GET TIME TO FINISH AND CHECK PROPERLY
+UPDATE EmpDetails
+SET salary = '90000.00',
+WHERE EmployeeID = '5';  

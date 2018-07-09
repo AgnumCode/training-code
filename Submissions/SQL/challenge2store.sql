@@ -49,3 +49,5 @@ WHERE CustomerID IN (SELECT ID FROM Customers WHERE FirstName = 'Tina' AND LastN
 SELECT (Products.Price * COUNT(ProductID)) FROM Products
 JOIN Orders ON (Orders.ProductID = Products.ID)
 GROUP BY Products.Price;
+
+
